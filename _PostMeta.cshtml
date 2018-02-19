@@ -1,0 +1,4 @@
+@{
+    var Published = Model.Get<DateTime>(BlogKeys.Published);
+}
+<p class="post-meta"><time datetime=$"@Published.ToString("o")" itemprop="datePublished">@Published.ToString("dd MMMM yyyy") r.</time> @Html.Partial("_TagsLinks", Model)</p>
