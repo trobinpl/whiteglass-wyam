@@ -11,7 +11,7 @@
         <li>
             <span class="post-meta">@Html.Partial("_PostMeta", post)</span>
             <h2>
-                <a class="post-link" href="@Context.GetLink(post)">@Model.WithoutSettings.String(BlogKeys.Title)</a>
+                <a class="post-link" href="@Context.GetLink(post)">@post.WithoutSettings.String(BlogKeys.Title)</a>
             </h2>
         </li>
     }
