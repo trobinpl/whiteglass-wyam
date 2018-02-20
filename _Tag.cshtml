@@ -4,15 +4,16 @@
     tag = tag.StartsWith(".") ? tag.Substring(1) : tag; 
 }
 
-<ul>
+<div class="home">
+<h1 class="page-heading">Archive of tag '@tag'</h1>
+<ul class="post-archives">
     @foreach(var post in postPages){
-    <li>
-        <a href="@Context.GetLink(post)">
-            <h2>@post.WithoutSettings.String(BlogKeys.Title)</h2>
-            @Html.Raw(post.String(BlogKeys.Excerpt))
-        </a>
-    </li>
+        <li>
+            <span class="post-meta">@Html.Partial("_PostMeta", post)</span>
+            <h2>
+                <a class="post-link" href="@Context.GetLink(post)">@Model.WithoutSettings.String(BlogKeys.Title)</a>
+            </h2>
+        </li>
     }
 </ul>
-
-<a href="@Context.GetLink(Context.String(BlogKeys.PostsPath))">Back To posts</a>
+</div>

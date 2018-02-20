@@ -6,8 +6,7 @@
                 <h1 class="post-title">
                     <a class="post-link" href="@Context.GetLink(post)">@post.WithoutSettings.String(BlogKeys.Title)</a>
                 </h1>
-
-                <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.categories != empty or post.tags != empty %}{% include category_links.html categories=post.categories tags=post.tags %}{% endif %}</p>
+                <p class="post-meta">@Html.Partial("_PostMeta", post)</p>
             </header>
             <div class="post-content">
                 @post.String(BlogKeys.Excerpt)

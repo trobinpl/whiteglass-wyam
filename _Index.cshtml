@@ -2,25 +2,7 @@
     <ul class="post-list">
     @foreach(var post in Model.DocumentList(Keys.PageDocuments)){
         <li>
-            <header class="post-header">
-                <h1 class="post-title">
-                    <a class="post-link" href="@Context.GetLink(post)">@post.WithoutSettings.String(BlogKeys.Title)</a>
-                </h1>
-                @Html.Partial("_PostMeta", post)
-            </header>
-            <div class="post-content">
-                @if(Context.Bool(BlogKeys.IndexFullPosts))
-                {
-                    @Html.Raw(post.Content)    
-                }
-                else
-                {
-                    @Html.Raw(post.String(BlogKeys.Excerpt))
-                    <p class="post-continue">
-                        <a href="@Context.GetLink(post)">Read on &rarr;</a>
-                    </p>
-                }
-            </div>
+            @Html.Partial("_Post", post)
         </li>
         }
     </ul>
