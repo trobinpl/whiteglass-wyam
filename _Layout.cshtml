@@ -16,7 +16,7 @@
         </main>
         <footer class="site-footer">
             <div class="wrapper">
-                <p>© trobinpl - Powered by <a href="https://wyam.io/">Waym</a> &amp; <a href="https://github.com/trobinpl/whiteglass-wyam">whiteglass-wyam</a> based on <a href="https://github.com/yous/whiteglass">whiteglass</a> © Yous - Subscribe via <a href="https://yous.github.io/whiteglass/feed.xml">RSS</a></p>
+                <p>© @Model.String("BlogAuthor") - Powered by <a href="https://wyam.io/">Waym</a> &amp; <a href="https://github.com/trobinpl/whiteglass-wyam">whiteglass-wyam</a> based on <a href="https://github.com/yous/whiteglass">whiteglass</a> © Yous - Subscribe via <a href="@Context.GetLink("feed.rss")">RSS</a></p>
             </div>
         </footer>
         @*@if(Context.String(BlogKeys.Description) != null)
@@ -54,6 +54,7 @@
                 <li><a href="@page.Item2">@page.Item1</a></li>
             }
         }*@
+    <script id="dsq-count-scr" src="//test-jkvbg2c3yi.disqus.com/count.js" async></script>
     </body>
 </html>
 
