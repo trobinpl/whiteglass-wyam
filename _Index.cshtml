@@ -16,7 +16,7 @@
     <a href="@(Context.GetLink(Model.Document(Keys.NextPage)))">Older <span aria-hidden="true">&rarr;</span></a> 
 }
 
-@if(Context.Bool(BlogKeys.GenerateArchive))
+@*@if(Context.Bool(BlogKeys.GenerateArchive))
 {
     <a href="@Context.GetLink(Context.String(BlogKeys.PostsPath))">Archive &rarr;</a>
-}
+}*@

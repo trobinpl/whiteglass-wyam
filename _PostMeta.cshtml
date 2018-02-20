@@ -1,4 +1,11 @@
 @{
     var Published = Model.Get<DateTime>(BlogKeys.Published);
+    var Author = Model.Metadata.Get<string>("Author");
 }
-<time datetime=$"@Published.ToString("o")" itemprop="datePublished">@Published.ToString("dd MMMM yyyy") r.</time> @Html.Partial("_TagsLinks", Model)
+@if(string.IsNullOrEmpty(Author))
+{
+    <time datetime=$"@Published.ToString("o")" itemprop="datePublished">@Published.ToString("dd MMMM yyyy") r.</time> @Html.Partial("_TagsLinks", Model)
+}
+else{
+    @Author @Html.Raw("•") <time datetime=$"@Published.ToString("o")" itemprop="datePublished">@Published.ToString("dd MMMM yyyy") r.</time> @Html.Partial("_TagsLinks", Model)
+}

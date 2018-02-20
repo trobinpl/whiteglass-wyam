@@ -14,6 +14,11 @@
                 @RenderBody()
             </div>
         </main>
+        <footer class="site-footer">
+            <div class="wrapper">
+                <p>© trobinpl - Powered by <a href="https://wyam.io/">Waym</a> &amp; <a href="https://github.com/trobinpl/whiteglass-wyam">whiteglass-wyam</a> based on <a href="https://github.com/yous/whiteglass">whiteglass</a> © Yous - Subscribe via <a href="https://yous.github.io/whiteglass/feed.xml">RSS</a></p>
+            </div>
+        </footer>
         @*@if(Context.String(BlogKeys.Description) != null)
         {
             <a href="@Context.GetLink("/")"><h1>@Context.String(BlogKeys.Description)</h1> </a>
