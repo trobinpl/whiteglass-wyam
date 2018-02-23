@@ -20,8 +20,3 @@ Right now this setting is used only to determine if there should be a "Read more
 
 ### `Settings["BlogAuthor"] = "Firstname Lastname";`
 This value is displayed in the footer of every page
-
-## Syntax highlighting
-Syntax highlighting is turned on by default. It uses Wyam's `Highlight()` module which uses [highlight.js][highlight] under the hood.
-
-[highlight]: https://highlightjs.org/
